@@ -1,8 +1,10 @@
-fetch("http://localhost:5000/projects")
+fetch("https://portfolio-8pkd.onrender.com/projects")
 .then((res) => res.json())
 .then((data) => {
 
     const container = document.getElementById("projects-container");
+
+    container.innerHTML = "";
 
     data.forEach((project) => {
 
@@ -13,7 +15,7 @@ fetch("http://localhost:5000/projects")
         div.innerHTML = `
             <h3>${project.title}</h3>
             <p>${project.description}</p>
-            <p>${project.tech}</p>
+            <p><strong>Tech:</strong> ${project.tech}</p>
         `;
 
         container.appendChild(div);
@@ -37,7 +39,7 @@ form.addEventListener("submit", async (e) => {
 
     const message = document.getElementById("message").value;
 
-    const response = await fetch("http://localhost:5000/contact", {
+    const response = await fetch("https://portfolio-8pkd.onrender.com/contact", {
 
         method: "POST",
 
