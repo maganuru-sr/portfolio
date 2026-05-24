@@ -1,0 +1,275 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#fefaf6;
+    color:#3e3e3e;
+}
+
+/* Navbar */
+
+nav{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 10%;
+    background:#fff7ef;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo{
+    color:#c97b63;
+    font-size:30px;
+    font-weight:700;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#5c4b51;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#c97b63;
+}
+
+/* Hero Section */
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+    background:
+    linear-gradient(to bottom,#fff7ef,#fefaf6);
+}
+
+.hero h2{
+    font-size:28px;
+    font-weight:400;
+    color:#7b6d72;
+}
+
+.hero h1{
+    font-size:90px;
+    color:#c97b63;
+    margin-top:10px;
+}
+
+.hero p{
+    max-width:750px;
+    margin:25px auto;
+    line-height:1.9;
+    color:#6b5e62;
+    font-size:18px;
+}
+
+/* Buttons */
+
+button{
+    padding:14px 30px;
+    border:none;
+    border-radius:14px;
+    background:#c97b63;
+    color:white;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+    font-size:16px;
+}
+
+button:hover{
+    transform:translateY(-3px);
+    background:#b56a54;
+    box-shadow:0 8px 18px rgba(201,123,99,0.25);
+}
+
+/* Sections */
+
+section{
+    padding:100px 10%;
+    animation:fadeIn 1s ease;
+}
+
+.section-title{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:55px;
+    color:#c97b63;
+}
+
+/* About */
+
+.about-content{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    line-height:2;
+    color:#6b5e62;
+    font-size:18px;
+}
+
+/* Skills */
+
+.skills-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.skill-card{
+    background:#fff7ef;
+    padding:18px 30px;
+    border-radius:14px;
+    transition:0.3s;
+    color:#5c4b51;
+    box-shadow:0 4px 12px rgba(0,0,0,0.05);
+}
+
+.skill-card:hover{
+    transform:translateY(-5px);
+    background:#c97b63;
+    color:white;
+}
+
+/* Projects */
+
+#projects-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#fff7ef;
+    padding:30px;
+    border-radius:22px;
+    transition:0.4s;
+    box-shadow:0 6px 18px rgba(0,0,0,0.06);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 14px 28px rgba(201,123,99,0.15);
+}
+
+.card h3{
+    color:#c97b63;
+    margin-bottom:18px;
+    font-size:24px;
+}
+
+.card p{
+    color:#6b5e62;
+    line-height:1.8;
+    margin-bottom:10px;
+}
+
+/* Contact */
+
+.contact form{
+    width:100%;
+    max-width:650px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+    background:#fff7ef;
+    padding:40px;
+    border-radius:22px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.06);
+}
+
+.contact input,
+.contact textarea{
+    padding:16px;
+    border:none;
+    border-radius:14px;
+    background:#fefaf6;
+    color:#3e3e3e;
+    font-size:16px;
+    outline:none;
+    border:1px solid #f0ddd2;
+}
+
+.contact input:focus,
+.contact textarea:focus{
+    border:1px solid #c97b63;
+}
+
+.contact textarea{
+    height:170px;
+    resize:none;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#fff7ef;
+    color:#7b6d72;
+    margin-top:40px;
+}
+
+/* Animation */
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:58px;
+    }
+
+    .section-title{
+        font-size:34px;
+    }
+
+    section{
+        padding:80px 8%;
+    }
+}
