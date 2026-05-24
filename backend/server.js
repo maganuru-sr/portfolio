@@ -1,3 +1,4 @@
+require("dotenv").config();
 const Message = require("./models/Message");
 const cors = require("cors");
 const express = require("express");
@@ -10,9 +11,7 @@ app.use(cors());
 
 app.use(express.json());
 
-mongoose.connect("mongodb+srv://admin:admin1@cluster0.xany2r9.mongodb.net/?appName=Cluster0")
-.then(() => console.log("DB Connected"));
-
+mongoose.connect(process.env.MONGO_URI)
 app.post("/add-project", async(req,res)=>{
 
     const newProject = new Project(req.body);
